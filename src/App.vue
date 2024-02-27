@@ -1,30 +1,38 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="container">
+    <div class="firstContainer">
+      <div>
+        <div class="simpleTraid">Simple Traid</div>
+        <div class="portalZen">Портал чистых цен</div>
+      </div>
+      <div class="imgUserIcon"><img :src="user" alt="User" /></div>
+    </div>
+    <router-view />
+  </div>
 </template>
 
+<script>
+import user from "@/icons/user.svg";
+export default {
+  setup() {
+    return { user };
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  margin: 0;
+  padding: 0;
 }
-
-nav {
-  padding: 30px;
+.container {
+  width: 375px;
+  height: 888px;
+  position: relative;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.firstContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 20px 11px 20px;
 }
 </style>
