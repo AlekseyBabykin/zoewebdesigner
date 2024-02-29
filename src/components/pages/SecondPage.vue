@@ -27,6 +27,7 @@
             class="mask-input"
             v-model="phone"
             mask="+7(###) ###-##-##"
+            placeholder=" "
           />
           <label class="input_placeholder" for="Номер телефона"
             >Номер телефона</label
